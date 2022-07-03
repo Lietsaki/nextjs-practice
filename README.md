@@ -2,6 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+You must supply a valid MongoDB connection string in the places that require it. To find them, search for '<PASSWORD>'
 First, run the development server:
 
 ```bash
