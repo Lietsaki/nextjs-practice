@@ -31,7 +31,9 @@ export async function getStaticPaths() {
     // False means it does contain all supported values, so if the user enters anything other than m1 or m2, they'd see a 404 error.
     // If you set it to true, a page will be generated dynamically on the server for the incoming request that's not present in paths (m3, following our example)
     // true is then a great way to pre-generate our most popular pages and let others be pre-generated on demand.
-    fallback: false,
+    // fallback can also be 'blocking', which does the same as true, but in that case it wouldn't show anything until the page is pre-rendered and served.
+    // True would show an empty page while the page is pre-rendered.
+    fallback: true,
     paths: meetups.map(meetup => ({ params: { meetupId: meetup._id.toString() } }))
     // paths: [
     //   { params: { meetupId: 'm1' } },

@@ -9,7 +9,6 @@ const HomePage = (props) => {
       <Head>
         <title>Next.js Meetups</title>
         <meta name="description" content="Browse a huge list of React Meetups" />
-
       </Head>
       <MeetupList meetups={props.meetups} />
     </Fragment>
